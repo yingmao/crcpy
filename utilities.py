@@ -21,4 +21,3 @@ def crc(message, generator, crc_code='0000'):
 				message[i+j] = str((int(message[i+j])+int(generator[j]))%2) # mod 2 division
 
 	return ''.join(message[-len(crc_code):])
-

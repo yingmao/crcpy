@@ -2,11 +2,11 @@ import socket
 from utilities import crc
 
 # socket requirements
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(('127.0.0.1',9999))
 server.listen(1)
 
-#while True:	
+#while True:	-
 # when a client is connected
 client, client_addr = server.accept()
 print('Device connected: ', client_addr)
@@ -32,7 +32,7 @@ if result != 0:
 else:
 	response = 'Ok'
 
-# response a ack or a nak 
+# response a ack or a nak
 client.send(response.encode())
 
 #close the connection.
